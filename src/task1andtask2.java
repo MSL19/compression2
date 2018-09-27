@@ -1,6 +1,8 @@
 public class task1andtask2 {
     public static void main(String[] args) {
-        String test = "aaaaaaaasdasdsadsadsad";
+        String test = "sssssssdddffff";
+        System.out.println("Here is my test string: "+test);
+        System.out.println("it should say: 7s3d4f");
         System.out.println(simpComp(test));
     }
     public static String disV(String s){
@@ -21,13 +23,15 @@ public class task1andtask2 {
         String temp = new String();
         for(int j = 0; j<s.length(); j++) {
             k = j;
-            num = 0;
-            if (j < s.length()-1) {
+            num = 1;
+            if (j < s.length()-2) {
                 if (s.substring(k, k + 1).equals(s.substring(k + 1, k + 2))) {
-                    while (s.substring(k, k + 1).equals(s.substring(k + 1, k + 2))) {
+                    while (k < s.length()-1&&s.substring(k, k + 1).equals(s.substring(k + 1, k + 2))) {
                         k++;
+
                         num++;
                     }
+                    j=k;
                     temp += s.substring(j, k) + num;
                 }
                 temp += s.substring(j, j + 1);
